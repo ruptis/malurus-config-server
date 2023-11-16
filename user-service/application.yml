@@ -4,8 +4,8 @@ server:
 spring:
   data:
     mongodb:
-      username: "{cipher}AQASAiBwNL6Ti1cQXfkZOJMRK4eEkQCikT4Ez/r9Ztp1oyIVZ6JmdcRUIqW2V1ZoOaaCI4CGYc31tIariNnOHB6byimVIWvDIT0lpBpqu0HNwgZQ7j8CJTBSBVnj2e1Vu0T56d15OMRShe0cDdsA83enyMU9XN6c/k1tHO2qm15gCjrpJcDhKvXgtluvp5W+44zzC7S1ZCRgGJI2Nj0u5K3p/dSlyUkcXBwXxzj8I2DTkSQMZBM/1LxSUKYh8esA9nDaHbUqNR4JZDhMuGPFZ28FD0LmTrZ3EmdapFhJu1FaIDXDjRjShfHauqjFZqKA5qEnSHBhuB+RT81s8yqks1eL2qv2jjB6sUas2vgzU23d8vH/MaDYbBdReN2D/yfMLSw="
-      password: "{cipher}AQAqmlyMtbq6HvDxhwesdpQbQVF/O/aPYOO3Eeb2butTHJ3ODdRJ/Ij/XWLG0WbmJI+XACW6sVOPxDM2NQ/DhGm5cV0OOhrQOcNwVn3dzy6PGvRgHlk+FyaEQgdsL2H8V2Duyj6pKiXbR+9MWF4aPJheWJ+O3OPmyOP+jzg6LAFOTlHwNWALZw8SqlkhgFVGIAtg5tdLl0Q+E9vzC1lV70ez2sLufyZZUNgZu7pJ7WGEwh/wgtLuDV8FTT4r/nK4Lwunoj7C68WTZoZmXPk10JScZPR047O+pRs/btRJNfDI1Dio+PbeVMCXiIJMGW84U566Tv7fiLngMPwXTQi4Y3Dw5hm80jW486BabfVO9x7X9ZMEGfA3sAUGMRWnm0HX+Lw="
+      username: root
+      password: root
       host: localhost
       port: 27017
       database: User
