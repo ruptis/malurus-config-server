@@ -1,0 +1,41 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: authentication-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authentication-service
+    username: "{cipher}AQABMLJKCwBT3dMEJVD4uonTvs8+SYlyxsbmYkYC/Vg9GnPC21gU0V7r1CFWraOxgcDkZ1KP5n/I1B9fz/iLxwGeSz4q8VVqB+qYBxFpEyqXR2AQm7acwCWUnbLx7p8Zt/njY3bWMFl0LHqqtxrKJ4dF2fTyv6K+YqSD1mmVEY5SK0pfzahyuT4VxWQk7kLHKxDwwrgGrg4Vo6fB5Ombo3Nw/CeahyWKqm3kyWMeae3e8SbpYifUZKooScBSZRuS6wPtB1WfGHkL6kzW5NMfu4wh47khFg9YoDGuUphgHgecsHfJnBUJMa+O7GnOG/n6K4IXVYlRO2EovMMjs6P9GdDNEHGLObSKEdZnFja6csudrrGz+GN+HBOvxC45tTeKbdk="
+    password: "{cipher}AQBhew5/MS2AcA9+CbcKCU3uAwmGbQOaS7KZERyPfHjc0wq5820bXECP+Pp0za0+xoe0dMYNTD/s7kaGifUctQX1eQ9Di4pzpj7yzduglXmrayfgRjsVq6zp+NZ79pacuY2FvhHaws9YG1YK6egSIQKQvHr9ayYXpGH+zIab4XVWkXIFEtXdiz84SIVMtyNTr/bK6avFU0Z715MwzCrSYSh5TrkQfgQ4EHIBNapXIxnsIfPiAqnlh4MeLsfUeX5O+IRvN9EIl1ICCH88f5eLaS14IOAqwYPb1q3b3h2rmigytK+TxvP49toMEiLvNltJNIZ8oT3V4cNNuO3J/flsKQv5SBl92zahkYOO9d1dnTqDapuaowBf+vJQVjdkdEciEA8="
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  api-docs:
+    path: /authentication-service/api-docs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+services:
+  user:
+    name: user-service
