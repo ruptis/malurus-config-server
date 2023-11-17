@@ -1,9 +1,9 @@
 server:
   port: 8085
 
-spring:
+spring: 
   datasource:
-    url: jdbc:postgresql://postgres-authentication-service:5433/social-graph-service
+    url: jdbc:postgresql://postgres-social-graph-service:5433/social-graph-service
   data:
     redis:
       host: redis
