@@ -5,7 +5,7 @@ spring:
   application:
     name: social-graph-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/social-graph-service
+    url: jdbc:postgresql://localhost:5433/social-graph-service
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
