@@ -22,6 +22,11 @@ spring:
           predicates:
             - Path=/user-service/api-docs/**
 
+        - id: social-graph-service-docs
+          uri: lb://SOCIAL-GRAPH-SERVICE
+          predicates:
+            - Path=/social-graph-service/api-docs/**
+
         - id: post-service-docs
           uri: lb://POST-SERVICE
           predicates:
