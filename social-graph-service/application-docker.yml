@@ -3,7 +3,7 @@ server:
 
 spring: 
   datasource:
-    url: jdbc:postgresql://postgres-social-graph-service:5433/social-graph-service
+    url: jdbc:postgresql://postgres-social-graph-service:5432/social-graph-service
   data:
     redis:
       host: redis
