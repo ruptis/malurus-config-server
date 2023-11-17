@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5431/post-service
-    username: "{cipher}AQDC7OZldXW2lMbSctK+U6ftZDldBdhh2t/Jd7rOb3UEn8DIW9spkU8lm6PaQZKegRRR+AojmcTfkUwkj1DFz2McPMofDunesu+LDPoe7xwme8eHVxdmMOTxIwjtmsB1om0HNfcH+9M4xNMYiG/MRLqEtgL5Bx/eRB68yBzUQspms6AvM7JKTjE1lZtpRjDWjVdlc8ZPpeYLb0j4wjJ2+nr1MRdUFM/EQnngTsKySfGxoS3L9Nt7a76Z9Plyt+hWJMG52PhyCEi/XVsztr17NptBnkFS7hy7jf7mlU3h8ucvL0NT2uh2rdakjoK3a3ncbByRX4BE+QJnxfaV0xQ1/0tutGfVNQfBJVy92nDKFFn/C4mUnqLzDonDkuAns9k/djc="
-    password: "{cipher}AQBhXBc32r0OCpHHQ6sngM8b/zZ0L058Oun/cETAZiDM7ONEHkbgLjmfq61E0Q7V9/mO78Xkuetu4tML8xxGkwHS0nllsOHhFSi1jbhcP3MRUD33X+ZhrUHUb8NCDZGJTTIehT1Atv2MdKDAN4IHR0AuNuI8pDaivn5TVtaZlUvmzwwyfB0GhOuMNA7P2yt7Gq2b/0gvVEDq2lI8OdiC1LlcUAUgLec+gXQBCIisnNLMNZAcdnnUYC7V/bx8n5KFEXkR3xdzJVLe9xLHrcDma0n6eY1Hz+9lcJTQRUEEsxAZs8AXRJ8w5qrvjgJs3U1pamnGkJXg7U098/PYQG74ozwCAZJKT1DeiJwQAJh/PxVuXURlULlfXr1iDn+CH1QGtdA="
+    username: postgres
+    password: password
     driver-class-name: org.postgresql.Driver
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -43,7 +43,3 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
-  
-services:
-  user:
-    name: user-service
