@@ -39,6 +39,13 @@ spring:
           filters:
             - Authentication
 
+        - id: social-graph-service
+          uri: lb://SOCIAL-GRAPH-SERVICE
+          predicates:
+            - Path=/api/v1/social-graph/**
+          filters:
+            - Authentication
+
         - id: post-service
           uri: lb://POST-SERVICE
           predicates:
@@ -64,6 +71,9 @@ springdoc:
 
       - name: user-service
         url: /user-service/api-docs
+
+      - name: social-graph-service
+        url: /social-graph-service/api-docs
 
       - name: authentication-service
         url: /authentication-service/api-docs
