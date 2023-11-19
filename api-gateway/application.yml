@@ -8,58 +8,58 @@ spring:
     gateway:
       routes:
         - id: authentication-service
-          uri: lb://AUTHENTICATION-SERVICE
+          uri: lb://authentication-service
           predicates:
             - Path=/api/v1/auth/**
 
         - id: authentication-service-docs
-          uri: lb://AUTHENTICATION-SERVICE
+          uri: lb://authentication-service
           predicates:
             - Path=/authentication-service/api-docs/**
 
         - id: user-service-docs
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/user-service/api-docs/**
 
         - id: social-graph-service-docs
-          uri: lb://SOCIAL-GRAPH-SERVICE
+          uri: lb://social-graph-service
           predicates:
             - Path=/social-graph-service/api-docs/**
 
         - id: post-service-docs
-          uri: lb://POST-SERVICE
+          uri: lb://post-service
           predicates:
             - Path=/post-service/api-docs/**
 
         - id: timeline-service-docs
-          uri: lb://TIMELINE-SERVICE
+          uri: lb://timeline-service
           predicates:
             - Path=/timeline-service/api-docs/**
 
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
           filters:
             - Authentication
 
         - id: social-graph-service
-          uri: lb://SOCIAL-GRAPH-SERVICE
+          uri: lb://social-graph-service
           predicates:
             - Path=/api/v1/social-graph/**
           filters:
             - Authentication
 
         - id: post-service
-          uri: lb://POST-SERVICE
+          uri: lb://post-service
           predicates:
             - Path=/api/v1/post/**,/api/v1/posts/**,/api/v1/like/**,/api/v1/repost/**,/api/v1/reposts/**,/api/v1/reply/**,/api/v1/replies/**
           filters:
             - Authentication
 
         - id: timeline-service
-          uri: lb://TIMELINE-SERVICE
+          uri: lb://timeline-service
           predicates:
             - Path=/api/v1/timeline/**
           filters:
@@ -91,11 +91,6 @@ logging:
     root: info
     org.springframework.cloud.gateway.route.RouteDefinitionLocator: info
     org.springframework.cloud.gateway: trace
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
 
 management:
   tracing:
