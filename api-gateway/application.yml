@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         - id: authentication-service
-          uri: lb://authentication-service
+          uri: http://authentication-service:8081
           predicates:
             - Path=/api/v1/auth/**
 
