@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: authentication-service
+  cloud:
+    kubernetes:
+      loadbalancer:
+        mode: service
   datasource:
     url: jdbc:postgresql://postgres-authentication-service:5432/authentication-service
     username: postgres
