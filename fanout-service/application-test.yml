@@ -1,8 +1,0 @@
-eureka:
-  client:
-    enabled: false
-
-spring:
-  kafka:
-    consumer:
-      auto-offset-reset: earliest
