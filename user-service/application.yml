@@ -12,8 +12,8 @@ spring:
       authentication-database: admin
       auto-index-creation: true
     redis:
-      host: redis
-      port: 6379
+      cluster:
+        nodes: redis-0.redis,redis-1.redis,redis-2.redis,redis-3.redis,redis-4.redis,redis-5.redis
   kafka:
     bootstrap-servers: kafka:9092
     producer:
