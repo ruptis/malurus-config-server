@@ -1,9 +1,11 @@
 server:
-  port: 0
+  port: 8084
 
 spring:
+  application:
+    name: post-service
   datasource:
-    url: jdbc:postgresql://localhost:5431/post-service
+    url: jdbc:postgresql://postgres-post-service:5431/post-service
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
@@ -21,7 +23,7 @@ spring:
       cluster:
         nodes: redis-0.redis:6379,redis-1.redis:6379,redis-2.redis:6379,redis-3.redis:6379,redis-4.redis:6379,redis-5.redis:6379
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -36,4 +38,4 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans

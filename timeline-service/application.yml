@@ -1,7 +1,9 @@
 server:
-  port: 0
+  port: 8085
 
 spring:
+  application:
+    name: timeline-service
   data:
     redis:
       cluster:
@@ -17,10 +19,12 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
 
 services:
   social-graph:
     name: social-graph-service
+    url: social-graph-service.default.svc.cluster.local:8083
   post:
     name: post-service
+    url: post-service.default.svc.cluster.local:8084
