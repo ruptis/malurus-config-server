@@ -1,11 +1,11 @@
 server:
-  port: 0
+  port: 8083
 
 spring:
   application:
     name: social-graph-service
   datasource:
-    url: jdbc:postgresql://localhost:5433/social-graph-service
+    url: jdbc:postgresql://postgres-social-graph-service:5433/social-graph-service
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
@@ -33,15 +33,10 @@ springdoc:
   api-docs:
     path: /social-graph-service/api-docs
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
 management:
   tracing:
     sampling:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
